@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewsApp.Views.CrearCuentaView"
+             Title="CrearCuentaView"  BackgroundImageSource="espacio.jpg">
+    <Grid>
+        <Label Margin="0,100" FontSize="Title" HorizontalOptions="CenterAndExpand" TextColor="White">
+            CREATER ACOUNT
+        </Label>
+        <Frame  HeightRequest="435" WidthRequest="350" CornerRadius="30" BackgroundColor="Transparent">
+            <VerticalStackLayout>
+            
+              
+           
+              <Frame Margin="0,25,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" WidthRequest="40" HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
+                        <Image Source="usuario.png" Aspect="AspectFill" Margin="0"></Image>
+                    </Frame>
+                    <Entry Margin="5" PlaceholderColor="DarkSlateBlue" Placeholder="Username" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+                </StackLayout>
+
+              </Frame>
+                
+              <Frame Margin="0,25,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="Transparent" BorderColor="Black" WidthRequest="40" HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
+                        <Image Source="mail.png" Aspect="AspectFill" Margin="0"></Image>
+                    </Frame>
+                    <Entry Margin="5" PlaceholderColor="DarkSlateBlue" Placeholder="E-mail" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+                </StackLayout>
+
+              </Frame>
+                
+              <Frame Margin="0,25,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="Transparent" BorderColor="Black" WidthRequest="40" HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
+                            <Image Source="password.png" Aspect="AspectFill" Margin="0"></Image>
+                    </Frame>
+                    <Entry IsPassword="True" Margin="5" PlaceholderColor="DarkSlateBlue" Placeholder="Password" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+                </StackLayout>
+
+              </Frame>
+                
+              <Button CornerRadius="30" Margin="0,25" TextColor="White" Text="Next"></Button>
+            </VerticalStackLayout>
+        </Frame>
+        
+    </Grid>
+</ContentPage>
