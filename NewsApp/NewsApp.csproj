@@ -49,9 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Comfortaa-SemiBold.ttf" />
 	  <None Remove="Resources\Images\buscar.png" />
 	  <None Remove="Resources\Images\cohete.png" />
 	  <None Remove="Resources\Images\espacio.jpg" />
+	  <None Remove="Resources\Images\logout.svg" />
 	  <None Remove="Resources\Images\mail.png" />
 	  <None Remove="Resources\Images\password.png" />
 	  <None Remove="Resources\Images\usuario.png" />
@@ -63,6 +65,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\CrearCuentaView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NoticiasView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

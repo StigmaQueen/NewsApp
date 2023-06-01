@@ -10,9 +10,9 @@
         </Grid.RowDefinitions>
 
         <Frame  HeightRequest="435" WidthRequest="350" CornerRadius="30" BackgroundColor="Transparent"  Grid.Row="1">
-            <StackLayout Padding="10">
+            <StackLayout VerticalOptions="Center" Padding="10">
 
-                <Frame Margin="0,15,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
+                <Frame Margin="0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
                     <StackLayout Orientation="Horizontal">
                         <Frame BackgroundColor="Transparent" BorderColor="Transparent" WidthRequest="40" HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
                             <Image Source="usuario.png" Aspect="AspectFill" Margin="0"></Image>
@@ -24,7 +24,8 @@
 
                 <Frame Margin="0,15,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
                     <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="Transparent" BorderColor="Black" WidthRequest="40" HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
+                        <Frame BackgroundColor="Transparent" BorderColor="Black"
+                               WidthRequest="40" HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
                             <Image Source="password.png" Aspect="AspectFill" Margin="0"></Image>
                         </Frame>
                         <Entry IsPassword="True" Margin="5" PlaceholderColor="DarkSlateBlue" Placeholder="Password" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
@@ -32,9 +33,18 @@
 
                 </Frame>
 
-                <Button CornerRadius="30" Margin="15" TextColor="White" Text="SING IN"></Button>
+                <Label Margin="0,5,0,0" TextDecorations="Underline" TextColor="White" HorizontalTextAlignment="End" Text="Don't you have an account yet?">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding .}">
 
-                <Grid  Padding="0,5">
+                            <!--<label> Binding para crear cuenta </label>-->
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Button CornerRadius="30" Margin="0,15,0,0" TextColor="White" Text="SIGN IN"></Button>
+
+                <Grid  Padding="0,15">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="30"/>
@@ -45,15 +55,15 @@
                     <BoxView Color="LightGrey" HeightRequest="1" Margin="1" Grid.Column="2"></BoxView>
                 </Grid>
 
-                <Button CornerRadius="30" Margin="15" TextColor="White" Text="SING UP"></Button>
+                
                 
                 <Frame Margin="0,0,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
 
                     <!--<Label>
-                    
+                      Tap de para incio de sesion
                     </Label>-->
                     <Frame.GestureRecognizers>  
-                        <TapGestureRecognizer></TapGestureRecognizer>
+                        <TapGestureRecognizer Command="{Binding .}"></TapGestureRecognizer>
                     </Frame.GestureRecognizers>
 
                     <StackLayout Orientation="Horizontal">
@@ -62,7 +72,7 @@
 
                             </Image>
                         </Frame>
-                        <Label  Padding="5,0,20,0" FontFamily="Bold" FontSize="Small" TextColor="DarkSlateBlue" Text="INICIA SESIÓN CON GOOGLE" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Label>
+                        <Label  Padding="5,0,20,0" FontFamily="Bold" FontSize="Small" TextColor="DarkSlateBlue" Text="SIGN IN WITH GOOGLE" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Label>
                     </StackLayout>
 
                 </Frame>
@@ -77,7 +87,7 @@
         </StackLayout>
 
         <Frame HorizontalOptions="Center" Padding="50,100" BackgroundColor="Transparent" BorderColor="Transparent" Grid.Row="2">
-            <Editor  IsEnabled="False" TextColor="White" HorizontalOptions="Center" Text="👽🕹 Todas las notas y lanzamientos sobre tus juegos, series y peliculas favoritas 🤓🧟"></Editor>
+            <Label FontFamily="ComfortaaSemiBold"  TextColor="White" HorizontalOptions="Center" Text="All the news and releases about your favorite games, series and movies."></Label>
                  
         </Frame>
 
