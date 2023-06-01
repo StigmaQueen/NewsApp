@@ -50,14 +50,19 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Comfortaa-SemiBold.ttf" />
+	  <None Remove="Resources\Images\arrow.png" />
 	  <None Remove="Resources\Images\buscar.png" />
+	  <None Remove="Resources\Images\caption.png" />
 	  <None Remove="Resources\Images\cohete.png" />
 	  <None Remove="Resources\Images\editar.png" />
 	  <None Remove="Resources\Images\eliminar.png" />
 	  <None Remove="Resources\Images\espacio.jpg" />
+	  <None Remove="Resources\Images\galaxy.png" />
+	  <None Remove="Resources\Images\link.png" />
 	  <None Remove="Resources\Images\logout.svg" />
 	  <None Remove="Resources\Images\mail.png" />
 	  <None Remove="Resources\Images\password.png" />
+	  <None Remove="Resources\Images\title.png" />
 	  <None Remove="Resources\Images\usuario.png" />
 	</ItemGroup>
 
@@ -66,13 +71,28 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\AggNoticiaView.xaml.cs">
+	    <DependentUpon>AggNoticiaView.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\CrearCuentaView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DetallesNoticia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditarNoticiaView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\NoticiasAdminView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\NoticiasView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AggNoticiaView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

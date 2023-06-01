@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewsApp.Views.DetallesNoticia"
+             Title="DetallesNoticia" BackgroundImageSource="espacio.jpg">
+    <Grid RowDefinitions=".08*,*">
+
+        <Grid
+            Grid.Row="0"
+            BackgroundColor="#000"
+            ColumnDefinitions=".2*,*,.2*"
+            RowDefinitions="*,1"
+            MinimumHeightRequest="30"
+            MaximumHeightRequest="50"
+            >
+            <Image HorizontalOptions="Start" Source="cohete.png"></Image>
+            <Label
+                Grid.Column="1"
+                Text="SPACE NEWS"
+                TextColor="#FFF"
+                FontSize="Title"
+                Margin="0,0,0,0"
+                VerticalOptions="Center"/>
+        
+            <ImageButton
+                
+                Grid.Column="2"
+                BackgroundColor="Transparent"
+                Source="arrow.png"
+                ToolTipProperties.Text="Cerrar"
+            />
+
+            <BoxView Grid.ColumnSpan="3" Color="#03DAC6" HeightRequest="1" Grid.Row="1"></BoxView>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+
+            <Frame  BackgroundColor="Transparent" BorderColor="#03DAC6"  Margin="15" Padding="15">
+                <StackLayout Spacing="5">
+                    <Label FontSize="Title" TextColor="White" Text="La NASA reveló imágenes impactantes de galaxias y estrellas nunca vistas" ></Label>
+                    <BoxView HeightRequest="1" Color="#03DAC6"></BoxView>
+                    <Image Source="https://www.infobae.com/new-resizer/5e0uQ5Q1TuQdXwa4mbIlwXqZ6aE=/992x992/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/Y4UTUY3KC5HXFJ77VXS3UIKZXU.jpg"></Image>
+
+                    <Grid>
+                        <Label FontSize="Caption" TextColor="White" Text="Esta es la imagen de NGC 346, un punto en el que se entremezclan polvo y los restos de una explosión (NASA)"></Label>
+                    </Grid>
+                    <Frame BackgroundColor="Transparent" BorderColor="#03DAC6"  Margin="10" >
+                        <Label LineBreakMode="WordWrap" HorizontalOptions="CenterAndExpand" TextColor="White">
+                            Desde el ente espacial estadounidense describieron cada una de las cuatro imágenes, que fueron adaptadas a los colores que los humanos perciben. En primer lugar, el cúmulo estelar, denominado NGC 346, está ubicado “en una galaxia cercana, la Pequeña Nube de Magallanes, a unos 200. 000 años luz de la Tierra”, explicaron desde la NASA.
+                            
+                            Y detallaron que esta figura muestra “penachos y arcos de gas y polvo que las estrellas y los planetas utilizan como fuente de material durante su formación. La nube púrpura de la izquierda, que se ve con Chandra, son los restos de una explosión de supernova de una estrella masiva. Los datos de Chandra también revelan estrellas jóvenes, calientes y masivas que envían poderosos vientos desde sus superficies”.
+                        </Label>
+                    </Frame>
+                    <Label TextColor="White">Fecha de publicacion</Label>
+                </StackLayout>
+            </Frame>
+
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

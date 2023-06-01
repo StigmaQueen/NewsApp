@@ -9,46 +9,54 @@
     <Grid RowDefinitions=".08*,*,.10*">
 
         <Button Margin="10"  Grid.Row="2"  Text="ADD NEWS" FontSize="Medium" BorderColor="White" BackgroundColor="#03DAC6"></Button>
+
         <Grid
+            
             BackgroundColor="#000"
-            ColumnDefinitions="*,.2*"
+            ColumnDefinitions=".2*,*,.2*"
             RowDefinitions="*,1"
             MinimumHeightRequest="30"
             MaximumHeightRequest="50"
             >
-
+            <Image HorizontalOptions="Start" Source="cohete.png"></Image>
             <Label
-                Text="NEWS APP"
+                Grid.Column="1"
+                Text="SPACE NEWS ADMIN"
                 TextColor="#FFF"
                 FontSize="Title"
-                Margin="10,0,0,0"
+                Margin="0,0,0,0"
                 VerticalOptions="Center"/>
 
             <Button
                 
-                Grid.Column="1"
+                Grid.Column="2"
                 BackgroundColor="Transparent"
                 ImageSource="logout.png"
                 ToolTipProperties.Text="Cerrar"
-                />
-            <BoxView Grid.ColumnSpan="2" Color="#03DAC6" HeightRequest="1" Grid.Row="1"></BoxView>
+            />
+
+            <BoxView Grid.ColumnSpan="3" Color="#03DAC6" HeightRequest="1" Grid.Row="1"></BoxView>
         </Grid>
-         
+
         <CollectionView Grid.Row="1" x:Name="listaNoticias">
+            
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="vm:Test">
+                    
                     <Frame BackgroundColor="Transparent" BorderColor="#03DAC6"  Margin="15" Padding="15">
+                        
+                        
                         <StackLayout Spacing="5">
-                            <Image Source="{Binding ImgSource}"></Image>
-                            <Label TextColor="White" Text="{Binding Titulo}"></Label>
-                            <Grid RowSpacing="0" ColumnDefinitions=".50*,*,.50*" RowDefinitions="*,*">
-                                <Frame Grid.RowSpan="2" HorizontalOptions="Start" HeightRequest="60"  BackgroundColor="Transparent" CornerRadius="30" Margin="0">
-                                    <Image WidthRequest="20" HeightRequest="20" Source="cohete.png" ></Image>
+                            
+                            <Image  Source="{Binding ImgSource}"></Image>
+                            <Label FontSize="Medium" Margin="10" HorizontalOptions="Start" TextColor="White" Text="{Binding Titulo}"></Label>
+                            <Label Margin="10" HorizontalOptions="Start" TextColor="White" Text="{Binding Fecha}" Grid.Column="1"></Label>
+                            <Grid ColumnDefinitions=".35*,*,.25*" RowDefinitions="*,*">
+
+                                <Frame BorderColor="#03DAC6" Grid.RowSpan="2" HorizontalOptions="Start" HeightRequest="60"  BackgroundColor="Transparent" CornerRadius="30" Margin="0">
+                                    <Image WidthRequest="20" HeightRequest="20" Source="galaxy.png" ></Image>
                                 </Frame>
 
-                                <Label  HorizontalOptions="Start" TextColor="White" Text="Lo que sea" Grid.Column="1"></Label>
-                                <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Fecha}" Grid.Column="1" Grid.Row="1"></Label>
-                                
                                 <ImageButton HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Source="editar.png" Grid.Column="2" Grid.Row="0" Margin="10"></ImageButton>
                                 <ImageButton HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Source="eliminar.png" Grid.Column="2" Grid.Row="1" Margin="10"></ImageButton>
                                
@@ -56,8 +64,11 @@
                             
                         </StackLayout>
                     </Frame>
+                    
                 </DataTemplate>
+                
             </CollectionView.ItemTemplate>
+            
         </CollectionView>
 
        

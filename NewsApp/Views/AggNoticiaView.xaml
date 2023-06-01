@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewsApp.Views.AggNoticiaView"
+             Title="ADD NEWSS" BackgroundImageSource="espacio.jpg">
+    <Grid>
+        
+        <Frame  Margin="15" CornerRadius="30" BorderColor="White" BackgroundColor="Transparent">
+
+            <StackLayout>
+
+                <Label Margin="0,0" FontSize="Title" HorizontalOptions="CenterAndExpand" TextColor="White">
+                  ADD NEWSS
+                 </Label>
+
+                <Frame Grid.Row="1" Margin="0,25,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame  BackgroundColor="Transparent" BorderColor="Black" WidthRequest="40" HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
+                            <Image Source="title.png" Aspect="AspectFill" Margin="0"></Image>
+                        </Frame>
+                        <Entry Margin="5" PlaceholderColor="DarkSlateBlue" Placeholder="Title" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="2" Margin="0,25,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Transparent" BorderColor="Black"  HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
+                            <Image Source="caption.png" Aspect="AspectFill" Margin="0"></Image>
+                        </Frame>
+                        <Entry  Margin="5" PlaceholderColor="DarkSlateBlue" Placeholder="Photo caption" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="3" Margin="0,25,0,0" HorizontalOptions="FillAndExpand" BorderColor="Purple" CornerRadius="30" Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Transparent" BorderColor="Black"  HeightRequest="40" CornerRadius="30" Margin="5" Padding="0">
+                            <Image Source="link.png" Aspect="AspectFill" Margin="0"></Image>
+                        </Frame>
+                        <Entry Margin="5" PlaceholderColor="DarkSlateBlue" Placeholder="News photo link" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame HeightRequest="320" Grid.Row="4" BorderColor="Purple" Margin="0,25,0,0"  CornerRadius="30">
+                     
+                     <Editor Placeholder="Body" BackgroundColor="White">
+                        
+                     </Editor>
+                  
+                </Frame>
+
+                <Button Grid.Row="5" BackgroundColor="#03DAC6" CornerRadius="30" Margin="0,25,0,0" TextColor="White" Text="SAVE"></Button>
+
+                <Entry Grid.Row="6" Text="Error" IsEnabled="False"  Margin="10" FontSize="Small" TextColor="Red" HorizontalTextAlignment="Center"></Entry>
+                
+            </StackLayout>
+        </Frame>
+
+    </Grid>
+</ContentPage>

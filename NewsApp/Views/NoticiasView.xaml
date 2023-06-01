@@ -6,47 +6,47 @@
              Title="Noticias" BackgroundColor="#242526" BackgroundImageSource="espacio.jpg">
 
     <Grid RowDefinitions=".08*,*">
-       
+
         <Grid
+            Grid.Row="0"
             BackgroundColor="#000"
-            ColumnDefinitions="*,.2*"
+            ColumnDefinitions=".2*,*,.2*"
             RowDefinitions="*,1"
             MinimumHeightRequest="30"
             MaximumHeightRequest="50"
             >
-
+            <Image HorizontalOptions="Start" Source="cohete.png"></Image>
             <Label
-                Text="NEWS APP"
+                Grid.Column="1"
+                Text="SPACE NEWS"
                 TextColor="#FFF"
                 FontSize="Title"
-                Margin="10,0,0,0"
+                Margin="0,0,0,0"
                 VerticalOptions="Center"/>
 
             <Button
                 
-                Grid.Column="1"
+                Grid.Column="2"
                 BackgroundColor="Transparent"
                 ImageSource="logout.png"
                 ToolTipProperties.Text="Cerrar"
-                />
-            <BoxView Grid.ColumnSpan="2" Color="#03DAC6" HeightRequest="1" Grid.Row="1"></BoxView>
+            />
+
+            <BoxView Grid.ColumnSpan="3" Color="#03DAC6" HeightRequest="1" Grid.Row="1"></BoxView>
         </Grid>
         <CollectionView Grid.Row="1" x:Name="listaNoticias">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="vm:Test">
                     <Frame BackgroundColor="Transparent" BorderColor="#03DAC6"  Margin="15" Padding="15">
-                        <StackLayout Spacing="5">
+                        <StackLayout>
                             <Image Source="{Binding ImgSource}"></Image>
-                            <Label TextColor="White" Text="{Binding Titulo}"></Label>
-                            <Grid ColumnSpacing="15" ColumnDefinitions=".23*,*" RowDefinitions="*,*">
-                                <Frame Grid.RowSpan="2" BackgroundColor="Transparent" CornerRadius="30" Margin="0">
-                                     <Image WidthRequest="20" HeightRequest="20" Source="cohete.png" ></Image>
-                                </Frame>
-                               
-                                <Label TextColor="White" Text="Lo que sea" Grid.Column="1"></Label>
-                                <Label TextColor="White" Text="{Binding Fecha}" Grid.Column="1" Grid.Row="1"></Label>
-                                
-                            </Grid>
+                              <Label Margin="10" FontSize="Medium" TextColor="White" Text="{Binding Titulo}" Grid.Column="1"></Label>
+                              <Label Margin="10" TextColor="White" Text="{Binding Fecha}" Grid.Column="1" Grid.Row="1"></Label>
+                          
+                              <Frame HorizontalOptions="End" BorderColor="#03DAC6" Grid.RowSpan="2" BackgroundColor="Transparent" CornerRadius="30" Margin="0">
+                                    <Image WidthRequest="20" HeightRequest="20" Source="galaxy.png" ></Image>
+                              </Frame>
+
                         </StackLayout>
                     </Frame>
                 </DataTemplate>
