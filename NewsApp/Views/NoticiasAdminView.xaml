@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NewsApp.Views.NoticiasView"
-             xmlns:vm="clr-namespace:NewsApp.dto"
-             Title="Noticias" BackgroundColor="#242526" BackgroundImageSource="espacio.jpg">
+             x:Class="NewsApp.Views.NoticiasAdminView"
+              xmlns:vm="clr-namespace:NewsApp.dto"
+             Title="NoticiasAdminView" BackgroundColor="#242526" BackgroundImageSource="espacio.jpg">
+    
+  
+    <Grid RowDefinitions=".08*,*,.10*">
 
-    <Grid RowDefinitions=".08*,*">
-       
+        <Button Margin="10"  Grid.Row="2"  Text="ADD NEWS" FontSize="Medium" BorderColor="White" BackgroundColor="#03DAC6"></Button>
         <Grid
             BackgroundColor="#000"
             ColumnDefinitions="*,.2*"
@@ -31,6 +33,7 @@
                 />
             <BoxView Grid.ColumnSpan="2" Color="#03DAC6" HeightRequest="1" Grid.Row="1"></BoxView>
         </Grid>
+         
         <CollectionView Grid.Row="1" x:Name="listaNoticias">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="vm:Test">
@@ -38,21 +41,29 @@
                         <StackLayout Spacing="5">
                             <Image Source="{Binding ImgSource}"></Image>
                             <Label TextColor="White" Text="{Binding Titulo}"></Label>
-                            <Grid ColumnSpacing="15" ColumnDefinitions=".23*,*" RowDefinitions="*,*">
-                                <Frame Grid.RowSpan="2" BackgroundColor="Transparent" CornerRadius="30" Margin="0">
-                                     <Image WidthRequest="20" HeightRequest="20" Source="cohete.png" ></Image>
+                            <Grid RowSpacing="0" ColumnDefinitions=".50*,*,.50*" RowDefinitions="*,*">
+                                <Frame Grid.RowSpan="2" HorizontalOptions="Start" HeightRequest="60"  BackgroundColor="Transparent" CornerRadius="30" Margin="0">
+                                    <Image WidthRequest="20" HeightRequest="20" Source="cohete.png" ></Image>
                                 </Frame>
-                               
-                                <Label TextColor="White" Text="Lo que sea" Grid.Column="1"></Label>
-                                <Label TextColor="White" Text="{Binding Fecha}" Grid.Column="1" Grid.Row="1"></Label>
+
+                                <Label  HorizontalOptions="Start" TextColor="White" Text="Lo que sea" Grid.Column="1"></Label>
+                                <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Fecha}" Grid.Column="1" Grid.Row="1"></Label>
                                 
+                                <ImageButton HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Source="editar.png" Grid.Column="2" Grid.Row="0" Margin="10"></ImageButton>
+                                <ImageButton HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Source="eliminar.png" Grid.Column="2" Grid.Row="1" Margin="10"></ImageButton>
+                               
                             </Grid>
+                            
                         </StackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        
+
+       
+     
+     
+
     </Grid>
-    
+
 </ContentPage>

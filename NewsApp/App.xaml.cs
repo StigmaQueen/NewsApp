@@ -6,6 +6,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new Views.NoticiasView();
+		MainPage = new Views.CrearCuentaView();
 	}
 }

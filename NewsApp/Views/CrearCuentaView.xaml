@@ -8,7 +8,7 @@
             CREATER ACOUNT
         </Label>
         <Frame  HeightRequest="435" WidthRequest="350" CornerRadius="30" BackgroundColor="Transparent">
-            <VerticalStackLayout>
+            <VerticalStackLayout VerticalOptions="Center">
             
               
            
